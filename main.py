@@ -7,14 +7,14 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    name = "i lick toes"
+    name = "Useless Website"
     return render_template("index.html", content=name)
 
-@app.route("/aboutme")
-def aboutme():
+@app.route("/randnum")
+def randnum():
     rand = random.randint(0,100)
-    return render_template("aboutme.html", rand = rand )
-
+    return render_template("randnum", rand = rand )
+    
 
 
 
