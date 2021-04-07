@@ -8,14 +8,16 @@ def home():
     name = "Verge"
     return render_template("index.html")
 
-app.route("/numgen")
+@app.route("/rng")
 def numgen():
     rand = random.randint(0,1000)
     return render_template("randnum.html")
 
  
 
-app.run()
+if __main__ == "__name__":
+    app.run()
+
 
 
 
